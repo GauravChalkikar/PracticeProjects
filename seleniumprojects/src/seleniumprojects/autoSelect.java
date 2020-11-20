@@ -12,7 +12,7 @@ public class autoSelect {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 
-		WebDriver driver =new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
@@ -20,25 +20,25 @@ public class autoSelect {
 
 		Thread.sleep(3000);
 
-		List<WebElement> options =driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+		List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
 
-		for(WebElement option :options)
-
-		{
-
-		if(option.getText().equalsIgnoreCase("India"))
+		for (WebElement option : options)
 
 		{
 
-		option.click();
+			if (option.getText().equalsIgnoreCase("India"))
 
-		break;
+			{
 
-		}
+				option.click();
+
+				break;
+
+			}
 
 		}
 		driver.findElement(By.cssSelector("input[id*=friendsandfamily")).click();
-	System.out.println(driver.findElement(By.cssSelector("input[@type='checkbox'])")));
+		System.out.println(driver.findElement(By.cssSelector("input[@type='checkbox'])")));
 	}
 
 }

@@ -15,6 +15,7 @@ public class Googlelogin {
 		driver.findElement(By.linkText("Gmail")).click();
 		driver.findElement(By.linkText("Sign in")).click();
 		driver.findElement(By.xpath("//input[@type='email']"));
+		driver.findElement(By.xpath("//div[@class='Xb9hP'] //input[@class='whsOnd zHQkBf']")).sendKeys("chalkikargv");
 	}
 
 }
